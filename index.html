@@ -2,46 +2,78 @@
 <html>
 <head>
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="icon.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Personal Portfolio</title>
+    <script>
+        function changeBackground() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1 id="name">Kwan Chan</h1>
+        <h1>Kwan Chan</h1>
         <nav>
             <ul>
                 <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div id="aboutme">
-            <h2>About Me</h2>
-            <p>Thanks for visiting my website. My name is Kwan, I am an organised and motivated individual with clear understanding of statistical, algebraic and data science techniques. 
-                I was a structural engineer by practice, experienced in working with stakeholders. 
-                Currently, I am on a traineeship programme to becoming a Web Developer, learning multiple coding languages such as C#, Javascript, React and PHP. 
-                Some of the coding skills I've previously acquired include Python, SQL and HTML.</p>
+            <div id="content">
+                <h3>About Me</h3>
+                <p>Welcome to my website. I am Kwan, I am an organised and motivated individual with clear understanding of statistical, algebraic and data science techniques. 
+                    I was a structural engineer by practice, experienced in working with stakeholders. 
+                    Currently, I am on a traineeship programme to becoming a Web Developer, learning multiple coding languages such as C#, Javascript, React and PHP. 
+                    Some of the coding skills I've previously acquired include Python, SQL and HTML.</p>
+                
+            </div>
+            <img src="media/Kwan.jpeg" alt="picture of Kwan">
         </div>
-        <img src="Kwan.jpeg" alt="picture of Kwan Chan">
         <div id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://zcestkc.github.io/excursion/">Excursion</a></li>
-                <li><a href="https://github.com/zcestkc/Mixed-Messages">Mixed Messages Generator</a></li>
-                <li><a href="https://github.com/zcestkc/Predicting-Car-Price-from-Scraped-Data">Car price prediction</a></li>
-            </ul>
+            <h3>Projects</h3>
+            <details>
+                <summary>Excursion</summary>
+                <img src="media/excursion.png">
+                <p><a href="https://zcestkc.github.io/excursion/" target="_blank">Excursion</a> is a project I've done.</p>
+            </details>
+            <details>
+                <summary>Mixed Messages Generator</summary>
+                <img src="media/message.png">
+                <p><a href="https://github.com/zcestkc/Mixed-Messages" target="_blank">Mixed Messages Generator</a> is a project I've done.</p>
+            </details>
+            <details>
+                <summary>Car Price Prediction</summary>
+                <img src="media/carprice.png">
+                <p><a href="https://github.com/zcestkc/Predicting-Car-Price-from-Scraped-Data" target="_blank">Car Price Prediction</a> is a project I've done.</p>
+            </details>
         </div>
         <div id="skills">
-
+            <h3>Skills</h3>
+            <div id="skills-container">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-react"></i>
+                <i class="fab fa-aws"></i>
+                <i class="fab fa-sketch"></i>
+                <i class="fab fa-figma"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-chrome"></i>
+                <i class="fas fa-terminal"></i>
+                <i class="fas fa-universal-access"></i>
+                <i class="fab fa-npm"></i>
+                <i class="fab fa-node"></i>
+                <i class="fab fa-github"></i>
+              </div>
+        <button onclick="changeBackground()" id="colorButton">Dark Mode</button>
         </div>
-        <div id="skills">
-
-        </div>
-
     </main>
-    
-
 </body>
 </html>
